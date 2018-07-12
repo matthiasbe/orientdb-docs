@@ -62,7 +62,7 @@ database.save(record);
 
 Since this is a separate record, the best way to reference it is to link it to a Document record. Example:
 ```java
-OBlob record = database.newBlog("Binary data".getBytes());
+OBlob record = database.newBlob("Binary data".getBytes());
 ODocument doc = new ODocument();
 doc.field("id", 12345);
 doc.field("binary", record);
