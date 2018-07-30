@@ -50,7 +50,7 @@ Person person = db.newInstance(Person.class, "Antoni", "Gaudi");
 db.save(person);
 ```
 
-Note that any Java object can be saved by calling the `db.save()` method.  If it doesn't exist in the database, OrientDB serializes and saves it.  In this case, the user must assign the results of the `db.save()` method in the argument in order to get the proxied instance.  Otherwise, the database always treats the object as a new one.  For instance,
+Note that any Java object can be saved by calling the `db.save()` method.  If it doesn't exist in the database, OrientDB serializes and saves it.  In this case, the user must assign the results of the `db.save()` method in the argument in order to get the proxied instance.  Otherwise, the database will treat the object as a new one for the next call to `save()`.  For instance,
 
 ```java
 // REGISTER THE CLASS ONLY ONCE AFTER THE DB IS OPEN/CREATED
